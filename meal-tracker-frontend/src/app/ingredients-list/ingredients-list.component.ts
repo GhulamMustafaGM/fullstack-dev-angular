@@ -7,18 +7,18 @@ import { Ingredient } from '../types';
   styleUrls: ['./ingredients-list.component.css']
 })
 export class IngredientsListComponent implements OnInit {
-  @Input() isLoading: boolean = true;
-  @Input() ingredients: Ingredient[] = [];
+	@Input() isLoading: boolean = true;
+	@Input() ingredients: Ingredient[] = [];
 
-  @Output() deleteIngredient = new EventEmitter<string>();
+	@Output() deleteIngredient = new EventEmitter<string>();
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	}
 
-  onDelete(ingredientName: string): void {
-    this.deleteIngredient.emit(ingredientName);
-  }
+	onDelete(ingredientName: string): void {
+		this.deleteIngredient.emit(ingredientName);
+	}
 
 }

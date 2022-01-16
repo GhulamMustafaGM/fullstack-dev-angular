@@ -1,17 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { SmallXComponent } from './small-x/small-x.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-
-import { environment } from '../environments/environment';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AddIngredientPageComponent } from './add-ingredient-page/add-ingredient-page.component';
 import { RecipeSearchPageComponent } from './recipe-search-page/recipe-search-page.component';
@@ -25,22 +20,19 @@ import { RecipeSearchResultsListComponent } from './recipe-search-results-list/r
     AppComponent,
     BackButtonComponent,
     SmallXComponent,
-    NavBarComponent,
     HomePageComponent,
     AddIngredientPageComponent,
     RecipeSearchPageComponent,
     ShoppingListPageComponent,
     IngredientsListComponent,
     MealsListComponent,
-    RecipeSearchResultsListComponent,
+    RecipeSearchResultsListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-	AngularFireModule.initializeApp(environment.firebase),
-	AngularFireAuthModule,
-	FormsModule,
 	HttpClientModule,
+	FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

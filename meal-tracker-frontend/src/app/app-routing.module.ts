@@ -6,17 +6,17 @@ import { RecipeSearchPageComponent } from './recipe-search-page/recipe-search-pa
 import { ShoppingListPageComponent } from './shopping-list-page/shopping-list-page.component';
 
 const routes: Routes = [{
-  path: '',
-  component: HomePageComponent,
-  }, {
-  path: 'recipes',
-  component: RecipeSearchPageComponent,
-  }, {
-  path: 'add-ingredient',
-  component: AddIngredientPageComponent,
-  }, {
-  path: 'shopping-list',
-  component: ShoppingListPageComponent,
+	path: '',
+	component: HomePageComponent,
+}, {
+	path: 'recipes',
+	component: RecipeSearchPageComponent,
+}, {
+	path: 'add-ingredient',
+	component: AddIngredientPageComponent,
+}, {
+	path: 'shopping-list',
+	component: ShoppingListPageComponent,
 }];
 
 @NgModule({

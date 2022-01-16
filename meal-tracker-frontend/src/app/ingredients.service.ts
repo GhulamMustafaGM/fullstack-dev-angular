@@ -8,20 +8,20 @@ import { Ingredient } from './types';
 })
 export class IngredientsService {
 
-  constructor(
-    private http: HttpClient,
-  ) { }
+	constructor(
+		private http: HttpClient,
+	) { }
 
-  getIngredients(): Observable<Ingredient[]> {
-    return this.http.get<Ingredient[]>('/api/ingredients');
-  }
+	getIngredients(): Observable<Ingredient[]> {
+		return this.http.get<Ingredient[]>('/api/ingredients');
+	}
 
-  deleteIngredient(name: string): Observable<Ingredient[]> {
-    return this.http.delete<Ingredient[]>(`/api/ingredients/${name}`);
-  }
+	deleteIngredient(name: string): Observable<Ingredient[]> {
+		return this.http.delete<Ingredient[]>(`/api/ingredients/${name}`);
+	}
 
-  addIngredient(name: string, amount: number, units: string): Observable<Ingredient[]> {
-    const newIngredient = { name: name.toLowerCase(), amount, units };
-    return this.http.post<Ingredient[]>(`/api/ingredients`, newIngredient);
-  }
+	addIngredient(name: string, amount: number, units: string): Observable<Ingredient[]> {
+		const newIngredient = { name: name.toLowerCase(), amount, units };
+		return this.http.post<Ingredient[]>(`/api/ingredients`, newIngredient);
+	}
 }
